@@ -1,10 +1,11 @@
 import React from 'react'
 import PhoneIcon from "../../assets/icons/phone.svg";
 import Menu from "../../assets/icons/menu.png";
+import { IoIosCloseCircle } from "react-icons/io";
 import "./Header.css";
 function Header() {
   const [headerSidebar, setHeaderSidebar] = React.useState(false); 
-  
+
   return (
     <div className={`header-main ${headerSidebar ? "active":""}`}>  
         <div className={`header-sidebar ${headerSidebar && 'active'}`}>
@@ -13,6 +14,7 @@ function Header() {
             <a>Products</a>
             <a>Blog</a>
             <a>Elements</a>
+            <a onClick={()=>{setHeaderSidebar(false)}} className="header-close-circle"><IoIosCloseCircle /></a>
         </div>
         <div className='wrapper header'>
             <div className='header-navigation'>
