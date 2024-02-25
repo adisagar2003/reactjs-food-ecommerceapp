@@ -4,12 +4,14 @@ import PersonIcon from "../../assets/icons/person.svg";
 import HeartIcon from "../../assets/icons/heart.svg";
 import CartIcon from "../../assets/icons/cart.svg";
 import NavbarLogo from "../../assets/icons/navbar-logo.png";
+import { useState } from "react";
 function Navbar() {
+  const [sidebar, setSidebar] = useState(false);
   return (
     <div className="navbar">
         <div className='wrapper'>
-            <div className='navbar-main'>
-                <div className="navbar-logo">
+            <div className='navbar-main'>         
+                <div className="navbar-logo" onClick={()=>setSidebar(true)}>
                     <img src={NavbarLogo} />
                 </div>
                 <div className="navbar-search">

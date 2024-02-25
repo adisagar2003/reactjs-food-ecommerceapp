@@ -3,11 +3,20 @@ import PhoneIcon from "../../assets/icons/phone.svg";
 import Menu from "../../assets/icons/menu.png";
 import "./Header.css";
 function Header() {
+  const [headerSidebar, setHeaderSidebar] = React.useState(false); 
+  
   return (
-    <div className='header-main'>
+    <div className={`header-main ${headerSidebar ? "active":""}`}>  
+        <div className={`header-sidebar ${headerSidebar && 'active'}`}>
+            <a>Home</a>
+            <a>Category</a>
+            <a>Products</a>
+            <a>Blog</a>
+            <a>Elements</a>
+        </div>
         <div className='wrapper header'>
             <div className='header-navigation'>
-                <a className='header-menu'><img src={Menu} /></a>
+                <a className='header-menu' onClick={()=>setHeaderSidebar(true)}><img src={Menu} /></a>
                 <div className='header-navitems'>
                     <a>Home</a>
                     <a>Category</a>
