@@ -9,10 +9,8 @@ function Navbar() {
   const [sidebar, setSidebar] = useState(false);
   return (
     <div className="navbar">
-        
         <div className='wrapper'>
-            <div className='navbar-main'>
-                
+            <div className='navbar-main'>         
                 <div className="navbar-logo" onClick={()=>setSidebar(true)}>
                     <img src={NavbarLogo} />
                 </div>

@@ -48,6 +48,7 @@
     padding: 10px;
     right: 0px;
 }
+
 .navbar-icons {
     display: flex;
     color: var(--black);
@@ -65,14 +66,6 @@
     display: none;
 }
 
-.navbar-sidebar {
-    
-}
-
-.navbar-sidebar .active {
-   background: red;
-  z-index: 99;
-}
 @media (max-width: 768px) {
     .navbar-search {
         display: none;
@@ -81,9 +74,5 @@
     .navbar-responsive-button {
         display: flex;
     }
-    
-    
-
-    
 }
 

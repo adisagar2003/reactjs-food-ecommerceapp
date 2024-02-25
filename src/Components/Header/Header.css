@@ -87,13 +87,11 @@
 
 .header-sidebar.active > a:hover{
     cursor: pointer;
-    
 }
 
 
 .header-sidebar.active > a:hover::before{
     width: 40%;
-
 }
 
 .header-sidebar {

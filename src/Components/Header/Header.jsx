@@ -4,13 +4,9 @@ import Menu from "../../assets/icons/menu.png";
 import "./Header.css";
 function Header() {
   const [headerSidebar, setHeaderSidebar] = React.useState(false); 
-
-  React.useEffect(()=>{
-    console.log(headerSidebar);
-  },[headerSidebar])
+  
   return (
-    <div className={`header-main ${headerSidebar ? "active":""}`}>
-        
+    <div className={`header-main ${headerSidebar ? "active":""}`}>  
         <div className={`header-sidebar ${headerSidebar && 'active'}`}>
             <a>Home</a>
             <a>Category</a>
@@ -18,7 +14,6 @@ function Header() {
             <a>Blog</a>
             <a>Elements</a>
         </div>
-        
         <div className='wrapper header'>
             <div className='header-navigation'>
                 <a className='header-menu' onClick={()=>setHeaderSidebar(true)}><img src={Menu} /></a>
