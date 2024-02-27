@@ -7,7 +7,6 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 
 function Products(props) {
-
   const [activeIndex, setActiveIndex] = useState(0);
   const [fetchedProducts, setFetchedProducts] = useState([]);
   const override = {
@@ -22,6 +21,7 @@ function Products(props) {
         setFetchedProducts(res.data.data);
     });
   },[]);
+  
   return (
     <section className="popular-products">
         <div className="wrapper">
@@ -36,17 +36,27 @@ function Products(props) {
                 </div>
                 <div className="pp-grid-items">
                         {fetchedProducts.length > 0 ? fetchedProducts.map((elem, i)=>{
-                        return (<ProductCard image={elem.image} ownerColor={elem.ownerColor} foodName={elem.foodName} foodType={elem.foodType} rating={elem.rating} owner={elem.owner} price={elem.price} orignalPrice={elem.orignalPrice} />)
-                        }): <div>
-                                <ClipLoader
-                                    color={"orange"}
-                                    loading={true}
-                                    cssOverride={override}
-                                    size={150}
-                                    aria-label="Loading Spinner"
-                                    data-testid="loader"
-                                />
-                            </div>}
+                        return (<ProductCard 
+                                    image={elem.image} 
+                                    ownerColor={elem.ownerColor} 
+                                    foodName={elem.foodName} 
+                                    foodType={elem.foodType} 
+                                    rating={elem.rating} 
+                                    owner={elem.owner} 
+                                    price={elem.price} 
+                                    orignalPrice={elem.orignalPrice} />)}
+                                    )
+                                    : 
+                                    <div>
+                                        <ClipLoader
+                                            color={"orange"}
+                                            loading={true}
+                                            cssOverride={override}
+                                            size={150}
+                                            aria-label="Loading Spinner"
+                                            data-testid="loader"
+                                        />
+                                    </div>}
                 </div>
             </div>
         </div>
