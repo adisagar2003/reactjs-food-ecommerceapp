@@ -1,13 +1,12 @@
 import { BsStarFill } from "react-icons/bs";
 import { CiShoppingCart } from "react-icons/ci";
 import "./ProductCard.css";
-import LemonImage from "../../assets/images/lemon.png";
 
 function ProductCard({foodType, foodName, rating, owner, ownerColor, price, orignalPrice, image, sticker}) {
   return (
     <div className="product-card">
         {sticker && <div className="product-sticker">{sticker}</div>}
-        <img src={LemonImage} />
+        <img src={image} />
         <div className="product-content">
             <div className="food-type">
                 {foodType}

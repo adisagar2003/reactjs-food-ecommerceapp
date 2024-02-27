@@ -74,5 +74,9 @@
     .navbar-responsive-button {
         display: flex;
     }
+
+    .navbar-icons {
+        display: none;
+    }
 }
 

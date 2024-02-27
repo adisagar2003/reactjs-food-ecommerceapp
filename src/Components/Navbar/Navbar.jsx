@@ -32,7 +32,7 @@ function Navbar() {
                         <span>Cart</span>
                     </div>
                 </div>
-                <button className="navbar-responsive-button"></button>
+                <a href="#products"  className="navbar-responsive-button" style={{"color": 'black'}}>Products</a>
             </div>
         </div>
     </div>
