@@ -78,6 +78,19 @@
     right: 0px;
 }
 
+.contact-button {
+    height: 100%;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+}
+
+.contact-button:hover {
+    background-color: rgb(255, 41, 41);
+    transition: .2s all;
+    cursor: pointer;
+}
+
 .contact-image {
     display: flex;
     align-items: flex-end;

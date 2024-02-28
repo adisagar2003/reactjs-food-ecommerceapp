@@ -59,11 +59,13 @@
 @media (max-width: 768px) {
     .footer {
         height: fit-content;
+        text-align: center;
     }
 
     .footer-content {
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
 
     .end-section {
@@ -72,5 +74,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
+    }
+
+    .footer-paragraph {
+        display: none;
+    }
+   
+    .footer-contact > span {
+        display: none;
     }
 }

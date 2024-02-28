@@ -21,7 +21,7 @@ function Contact() {
                     <div className='contact-input-container'>
                         <FaRegPaperPlane  className='send-message-icon'/>
                         <input placeholder='Your email address' />
-                        <button className='contact button'>Subscribe</button>
+                        <button className='contact-button'>Subscribe</button>
                     </div>
                 </div>
                 <div className='contact-image'>

@@ -11,7 +11,7 @@ function Footer() {
             <div className='footer-content'>
                 <div className="footer-contact">
                     <img src={Logo} width={200} />
-                    <p>FoodTrove is the biggest market of grocery products. Get your daily needs from our store.</p>
+                    <p className="footer-paragraph">FoodTrove is the biggest market of grocery products. Get your daily needs from our store.</p>
                     <span>
                     <img src={MapLogo} />
                         51 Green St.Huntington ohio beach ontario, NY
