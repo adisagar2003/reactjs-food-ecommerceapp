@@ -8,14 +8,17 @@ import { useState } from "react";
 import { ClipLoader } from "react-spinners";
 import { useSelector } from "react-redux";
 import { api_url } from "../../api/api";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Navbar() {
+
+  const navigate = useNavigate();
   const [sidebar, setSidebar] = useState(false);
   const [searchContent, setSearchContent] = useState("");
   const [searchedContentData, setSearchedContentData] = useState([]);
   // get cart items 
   const cartItems = useSelector(state=> state.items);
-  console.log(cartItems);
   // fetch relevant items when searching for content
   function changeSearchContent(e) {
     setSearchContent(e.target.value);
@@ -33,7 +36,7 @@ function Navbar() {
     <div className="navbar">
         <div className='wrapper'>
             <div className='navbar-main'>         
-                <div className="navbar-logo" onClick={()=>setSidebar(true)}>
+                <div className="navbar-logo" onClick={()=>navigate('/')}>
                     <img src={NavbarLogo} />
                 </div>
                 <div className="navbar-search">
@@ -62,12 +65,12 @@ function Navbar() {
                         <span><img src={HeartIcon} /></span>
                         <span>Wishlist</span>
                     </div>
-                    <div>
+                    <div onClick={() => navigate('/cart')}>
                         <span><img src={CartIcon} /></span>
                         <span>Cart {cartItems}</span>
                     </div>
                 </div>
-                <a href="#products"  className="navbar-responsive-button" style={{"color": 'black'}}>Products</a>
+                <a onClick={() => navigate('/cart')} className="navbar-responsive-button" style={{"color": 'black'}}><span>Cart {cartItems}</span></a>
             </div>
         </div>
     </div>

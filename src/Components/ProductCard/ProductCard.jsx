@@ -2,11 +2,10 @@ import { BsStarFill } from "react-icons/bs";
 import { CiShoppingCart } from "react-icons/ci";
 import "./ProductCard.css";
 import { useDispatch } from "react-redux";
-import { increment, decrement } from "../../redux/features/cart/cartSlice";
+import { increment } from "../../redux/features/cart/cartSlice";
 
 function ProductCard({foodType, foodName, rating, owner, ownerColor, price, orignalPrice, image, sticker}) {
     const dispatch = useDispatch();
-
     return (
     <div className="product-card">
         {sticker && <div className="product-sticker">{sticker}</div>}

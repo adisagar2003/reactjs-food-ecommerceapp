@@ -3,14 +3,16 @@ import PhoneIcon from "../../assets/icons/phone.svg";
 import Menu from "../../assets/icons/menu.png";
 import { IoIosCloseCircle } from "react-icons/io";
 import "./Header.css";
-function Header() {
-  const [headerSidebar, setHeaderSidebar] = React.useState(false); 
+import { useNavigate } from 'react-router-dom';
 
+function Header() {
+  const navigate = useNavigate();
+  const [headerSidebar, setHeaderSidebar] = React.useState(false); 
   return (
     <div className={`header-main ${headerSidebar ? "active":""}`}>  
         <div className={`header-sidebar ${headerSidebar && 'active'}`}>
-            <a>Home</a>
-            <a>Category</a>
+            <a onClick={()=>navigate('/')}>Home</a>
+            <a>Cart</a>
             <a>Products</a>
             <a>Blog</a>
             <a>Elements</a>
@@ -20,7 +22,7 @@ function Header() {
             <div className='header-navigation'>
                 <a className='header-menu' onClick={()=>setHeaderSidebar(true)}><img src={Menu} /></a>
                 <div className='header-navitems'>
-                    <a>Home</a>
+                    <a onClick={()=>navigate('/')}>Home</a>
                     <a>Category</a>
                     <a>Products</a>
                     <a>Blog</a>

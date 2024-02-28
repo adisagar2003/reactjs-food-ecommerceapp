@@ -76,3 +76,19 @@
     font-size: 14px;
     font-weight: 400;
 }
+
+.card-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-button >:first-child {
+    position: relative;
+    top: 1px;
+}
+
+.card-button:hover {
+    background-color: red;
+    cursor: pointer;
+}
