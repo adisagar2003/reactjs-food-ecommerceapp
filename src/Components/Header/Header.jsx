@@ -6,10 +6,8 @@ import "./Header.css";
 import { useNavigate } from 'react-router-dom';
 
 function Header() {
-
   const navigate = useNavigate();
   const [headerSidebar, setHeaderSidebar] = React.useState(false); 
-
   return (
     <div className={`header-main ${headerSidebar ? "active":""}`}>  
         <div className={`header-sidebar ${headerSidebar && 'active'}`}>

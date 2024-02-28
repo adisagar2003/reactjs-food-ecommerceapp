@@ -11,7 +11,7 @@ function Home() {
         <Header />
         <Navbar />
         <Hero />
-        <Products />
+        <Products heading="Popular Products" navlinks={["All","Milk and Dairies","Coffee & Teas","Pet foods","Meats", "Vegetables", "Fruits"]} productsToShow={[{ownerColor:"red" ,foodName:"Fresh organic villa farm lemon 500gm pack", foodType:"Snack", rating:4, owner:"NestFood", price:28.85, orignalPrice:34.44},{ownerColor:"red" ,foodName:"Fresh organic villa farm lemon 500gm pack", foodType:"Snack", rating:4, owner:"NestFood", price:28.85, orignalPrice:34.44},{ownerColor:"red" ,foodName:"Fresh organic villa farm lemon 500gm pack", foodType:"Snack", rating:4, owner:"NestFood", price:28.85, orignalPrice:34.44},{ownerColor:"red" ,foodName:"Fresh organic villa farm lemon 500gm pack", foodType:"Snack", rating:4, owner:"NestFood", price:28.85, orignalPrice:34.44}, {ownerColor:"red" ,foodName:"Fresh organic villa farm lemon 500gm pack", foodType:"Snack", rating:4, owner:"NestFood", price:28.85, orignalPrice:34.44},{ownerColor:"red" ,foodName:"Fresh organic villa farm lemon 500gm pack", foodType:"Snack", rating:4, owner:"NestFood", price:28.85, orignalPrice:34.44}, {ownerColor:"red" ,foodName:"Fresh organic villa farm lemon 500gm pack", foodType:"Snack", rating:4, owner:"NestFood", price:28.85, orignalPrice:34.44}, {ownerColor:"red" ,foodName:"Fresh organic villa farm lemon 500gm pack", foodType:"Snack", rating:4, owner:"NestFood", price:28.85, orignalPrice:34.44}]} />
         <Contact />
         <Footer />
     </div>
